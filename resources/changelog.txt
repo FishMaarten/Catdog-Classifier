@@ -1,0 +1,28 @@
+	    CHANGELOG
+-----------------------------------------
+
+VERSION.0.1:
+
+new file:   Procfile
+new file:   README.md
+new file:   app/__init__.py
+new file:   app/forms.py
+new file:   app/routes.py
+new file:   app/static/cat.png
+new file:   app/static/class.png
+new file:   app/static/dog.png
+new file:   app/static/upload.png
+new file:   app/static/wallpaper.jpg
+new file:   app/templates/index.html
+new file:   cat_dog_model.h5
+new file:   catdog.py
+new file:   config.py
+new file:   requirements.txt
+new file:   resources/cat_dog.ipynb
+new file:   resources/catdog_screen.png
+new file:   resources/changelog.txt
+new file:   resources/convolution.png
+new file:   resources/convolution_filter.ipynb
+new file:   resources/mnest.png
+new file:   resources/tensorflow.ipynb
+new file:   resources/training_logs.txt
