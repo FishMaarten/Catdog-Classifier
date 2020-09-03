@@ -1,7 +1,7 @@
 # Cat or dog classification
 
 **Author:** Maarten Fish  
-Version.0.1 [changelog](https://github.com/FishMaarten/Catdog/blob/master/resources/changelog.txt)
+Version.0.1 [changelog](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/changelog.txt)
 
 - **Goal:**  
 
@@ -12,7 +12,7 @@ A **pre-trained neural net predicts** the *class* of the animal.
 
 
 - **Deployment:**  
-**Flask** was used to handle the application [rendering](https://github.com/FishMaarten/Catdog/blob/master/app/routes.py)
+**Flask** was used to handle the application [rendering](https://github.com/FishMaarten/Catdog-Classifier/blob/master/app/routes.py)
 ```py
 @app.route("/", methods=["GET","POST"])
 def index():
@@ -27,7 +27,7 @@ def index():
             return render_template("index.html", form=form, pred=pred)
     return render_template("index.html", form=form, pred="")
 ```
-I learned some **java for event handling** the [index.html](https://github.com/FishMaarten/Catdog/blob/master/app/templates/index.html)
+I learned some **java for event handling** the [index.html](https://github.com/FishMaarten/Catdog-Classifier/blob/master/app/templates/index.html)
 ```java
 const fileField = document.getElementById("upload");                                  
 fileField.addEventListener("change", (event) => {                                     
@@ -47,12 +47,12 @@ fileField.onchange = function () {
 - Try it yourself on the **heroku app  
 https://catdog-classifier.herokuapp.com/**
 
-![application screenshot](https://github.com/FishMaarten/Catdog/blob/master/resources/catdog_screen.png)
+![application screenshot](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/catdog_screen.png)
 
 # Technical
-- **Model:** [Convolutional neural network (notebook)](https://github.com/FishMaarten/Catdog/blob/master/resources/cat_dog.ipynb)
+- **Model:** [Convolutional neural network (notebook)](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/cat_dog.ipynb)
 
-This model was chosen after *experimenting* on [custom convolution and pooling from scratch](https://github.com/FishMaarten/Catdog/blob/master/resources/convolution_filter.ipynb)
+This model was chosen after *experimenting* on [custom convolution and pooling from scratch](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/convolution_filter.ipynb)
 
 It's a *simple but effective* net with an **input convolution** of only **6 kernels size 5x5**  
 after which a **5x5 max pool** is applied with a **stride** of **3**
@@ -76,7 +76,7 @@ model = Sequential([
     Dense(2, activation="softmax")
 ])
 ```
-[Deeper dive](https://github.com/FishMaarten/Catdog/blob/master/resources/tensorflow.ipynb) into tensorflow keras components and flow
+[Deeper dive](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/tensorflow.ipynb) into tensorflow keras components and flow
 
 - **Training:**
 
@@ -99,9 +99,9 @@ This results in a smaller, **compressed image** depending on **pool size and str
 
 - **Visualization:**
 
-![filters](https://github.com/FishMaarten/Catdog/blob/master/resources/convolution.png)
+![filters](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/convolution.png)
 
-![mnest digits](https://github.com/FishMaarten/Catdog/blob/master/resources/mnest.png)
+![mnest digits](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/mnest.png)
 
 # Todo
 - Accuracy tracker
@@ -109,15 +109,15 @@ This results in a smaller, **compressed image** depending on **pool size and str
 - Database
 
 # Contents
-[**routes.py**](https://github.com/FishMaarten/Catdog/blob/master/app/routes.py)
+[**routes.py**](https://github.com/FishMaarten/Catdog-Classifier/blob/master/app/routes.py)
 Web application renderer, core functionality  
-[**index.html**](https://github.com/FishMaarten/Catdog/blob/master/app/templates/index.html)
+[**index.html**](https://github.com/FishMaarten/Catdog-Classifier/blob/master/app/templates/index.html)
 Html backend for the application  
-[**catdog.py**](https://github.com/FishMaarten/Catdog/blob/master/catdog.py)
+[**catdog.py**](https://github.com/FishMaarten/Catdog-Classifier/blob/master/catdog.py)
 Main flask app python script  
-[**config.py**](https://github.com/FishMaarten/Catdog/blob/master/config.py)
+[**config.py**](https://github.com/FishMaarten/Catdog-Classifier/blob/master/config.py)
 Configuration file for the flask  
-[**training_logs.txt**](https://github.com/FishMaarten/Catdog/blob/master/resources/training_logs.txt)
+[**training_logs.txt**](https://github.com/FishMaarten/Catdog-Classifier/blob/master/resources/training_logs.txt)
 Epoch loss and accuracy
 
 **Procfile** Tells heroku how to boot
@@ -139,26 +139,26 @@ Keras==2.4.3
 
 VERSION.0.1:
 
-new file:   Procfile
-new file:   README.md
-new file:   app/__init__.py
-new file:   app/forms.py
-new file:   app/routes.py
-new file:   app/static/cat.png
-new file:   app/static/class.png
-new file:   app/static/dog.png
-new file:   app/static/upload.png
-new file:   app/static/wallpaper.jpg
-new file:   app/templates/index.html
-new file:   cat_dog_model.h5
-new file:   catdog.py
-new file:   config.py
-new file:   requirements.txt
-new file:   resources/cat_dog.ipynb
-new file:   resources/catdog_screen.png
-new file:   resources/changelog.txt
-new file:   resources/convolution.png
-new file:   resources/convolution_filter.ipynb
-new file:   resources/mnest.png
-new file:   resources/tensorflow.ipynb
-new file:   resources/training_logs.txt
+new file:   Procfile  
+new file:   README.md  
+new file:   app/__init__.py  
+new file:   app/forms.py  
+new file:   app/routes.py  
+new file:   app/static/cat.png  
+new file:   app/static/class.png  
+new file:   app/static/dog.png  
+new file:   app/static/upload.png  
+new file:   app/static/wallpaper.jpg  
+new file:   app/templates/index.html  
+new file:   cat_dog_model.h5  
+new file:   catdog.py  
+new file:   config.py  
+new file:   requirements.txt  
+new file:   resources/cat_dog.ipynb  
+new file:   resources/catdog_screen.png  
+new file:   resources/changelog.txt  
+new file:   resources/convolution.png  
+new file:   resources/convolution_filter.ipynb  
+new file:   resources/mnest.png  
+new file:   resources/tensorflow.ipynb  
+new file:   resources/training_logs.txt  
